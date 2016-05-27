@@ -3,3 +3,7 @@
 :email: graeme.rocher@gmail.com
 :source-highlighter: coderay
 :numbered:
+
+== Introduction
+
+include::introduction.adoc[]
