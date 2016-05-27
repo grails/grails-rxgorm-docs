@@ -36,6 +36,9 @@ if [[ $TRAVIS_REPO_SLUG == "grails/grails-rxgorm-docs" && $TRAVIS_PULL_REQUEST =
             cp -r ../../build/docs/. ./snapshot/
 
             git add snapshot/*
+            git commit -a -m "Updating docs for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
+            git push origin HEAD        
+            
         fi
     fi
 fi  

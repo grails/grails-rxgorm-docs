@@ -38,7 +38,7 @@ task apidocs(type: Copy) {
   from zipTree(configurations.coreDocumentation.singleFile )
 }
 
-task docs(type:Copy, dependsOn:[asciidoctor])  {
+task docs(type:Copy, dependsOn:[apidocs, asciidoctor])  {
     from "$buildDir/asciidoc/html5"
     into "$buildDir/docs"
 }
