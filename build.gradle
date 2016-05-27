@@ -1,0 +1,44 @@
+plugins {
+    id 'org.asciidoctor.convert' version '1.5.3'
+}
+
+version = "6.0.0.BUILD-SNAPSHOT"
+
+asciidoctor {
+    resources {
+        from('src/docs/images')
+        into "./images"
+    }
+
+    attributes 'experimental'  : 'true',
+               'compat-mode'   : 'true',
+               'toc'           : 'left',
+               'icons'         : 'font',
+               'version'       : project.version
+}
+
+repositories {
+  mavenLocal()
+  maven {
+    url "http://repo.grails.org/grails/core/"
+  }
+}
+configurations {
+  coreDocumentation
+}
+
+dependencies {
+  coreDocumentation group:'org.grails', name:"grails-datastore-gorm-rx", version:version, classifier:"javadoc", {
+    transitive = false
+  }
+}
+
+task apidocs(type: Copy) {
+  into "build/docs/api"
+  from zipTree(configurations.coreDocumentation.singleFile )
+}
+
+task docs(type:Copy, dependsOn:[asciidoctor])  {
+    from "$buildDir/asciidoc/html5"
+    into "$buildDir/docs"
+}
