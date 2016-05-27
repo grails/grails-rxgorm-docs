@@ -30,7 +30,6 @@ if [[ $TRAVIS_REPO_SLUG == "grails/grails-rxgorm-docs" && $TRAVIS_PULL_REQUEST =
 
         git commit -a -m "Updating docs for Travis build: https://travis-ci.org/$TRAVIS_REPO_SLUG/builds/$TRAVIS_BUILD_ID"
         git push origin HEAD        
-    fi
     else
         if [[ $TRAVIS_BRANCH == 'master' ]]; then
             mkdir -p snapshot
