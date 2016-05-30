@@ -40,9 +40,9 @@ def env = new StandardEnvironment()
 env.getPropertySources().addLast(new PropertiesPropertySource("myConfig", myConfig))
 
 new RxMongoDatastoreClient(
-            env, <1>
-            "myDatabase", <2>
-            MyClass <3>
+            env,
+            "myDatabase",
+            MyClass
 )
 ----
 
@@ -51,8 +51,8 @@ If you are using Spring Boot then the `Environment` instance can be obtained fro
 [source,groovy]
 ----
 new RxMongoDatastoreClient(
-            applicationContext.getEnvironment(), <1>
-            "myDatabase", <2>
-            MyClass <3>
+            applicationContext.getEnvironment(),
+            "myDatabase",
+            MyClass
 )
 ----
