@@ -7,3 +7,15 @@
 == Introduction
 
 include::introduction.adoc[]
+
+== Configuration
+
+include::configuration/config.adoc[]
+
+== Querying
+
+include::querying/index.adoc[]
+
+== Associations and Lazy Loading
+
+include::associations/index.adoc[]

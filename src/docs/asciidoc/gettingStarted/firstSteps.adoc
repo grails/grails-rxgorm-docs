@@ -38,6 +38,6 @@ new RxMongoDatastoreClient(
 <2> The name of the default database to save objects to
 <3> One or many classes that implement link:api/grails/gorm/rx/RxEntity.html[RxEntity]
 
-The link:api/org/grails/datastore/rx/mongodb/RxMongoDatastoreClient.html[RxMongoDatastoreClient] class is required to initialize RxGORM.
+The `org.grails.datastore.rx.mongodb.RxMongoDatastoreClient` class is required to initialize RxGORM for MongoDB.
 
 

@@ -19,6 +19,8 @@ class Book implements RxMongoEntity<Book> {
 }
 ----
 
-Notice that the type is provided as a generic argument to the `RxMongoEntity` trait. This is important to ensure the correct return signatures are produced for methods provided by the trait.
+NOTE: The type is provided as a generic argument to the `RxMongoEntity` trait. This is important to ensure the correct return signatures are produced for methods provided by the trait.
 
 In addition, for MongoDB an `id` of type `ObjectId` is required.
+
+For more information on domain modelling in GORM, take a look at the http://docs.grails.org/latest/guide/GORM.html#domainClasses[GORM user guide documentation] on the subject.
